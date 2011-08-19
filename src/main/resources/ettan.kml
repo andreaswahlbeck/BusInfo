@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Fake Bus routes</name>
+  <description><![CDATA[]]></description>
+  <Style id="style5">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style6">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style2">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style3">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style4">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style1">
+    <LineStyle>
+      <color>73FF0000</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+  <Placemark>
+    <name>Busstop 1</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style5</styleUrl>
+    <Point>
+      <coordinates>17.308167,62.385784,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Busstop 2</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style6</styleUrl>
+    <Point>
+      <coordinates>17.302608,62.386353,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Busstop 3</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style2</styleUrl>
+    <Point>
+      <coordinates>17.297503,62.386967,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Busstop 4</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style3</styleUrl>
+    <Point>
+      <coordinates>17.293682,62.387455,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Busstop 5</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style4</styleUrl>
+    <Point>
+      <coordinates>17.289370,62.387882,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>bus route 1</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style1</styleUrl>
+    <ExtendedData>
+      <Data name="_SnapToRoads">
+        <value>true</value>
+      </Data>
+    </ExtendedData>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        17.289379,62.387878,0.000000
+        17.291809,62.387619,0.000000
+        17.291950,62.387650,0.000000
+        17.295900,62.387230,0.000000
+        17.296101,62.387119,0.000000
+        17.297079,62.387039,0.000000
+        17.299231,62.386791,0.000000
+        17.299810,62.386688,0.000000
+        17.302320,62.386429,0.000000
+        17.303141,62.386311,0.000000
+        17.303900,62.386250,0.000000
+        17.308189,62.385792,0.000000
+      </coordinates>
+    </LineString>
+  </Placemark>
+</Document>
+</kml>
