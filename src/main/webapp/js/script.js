@@ -1,3 +1,20 @@
+var mapHandler = function(){
+	var sundsvallLatLong =  new google.maps.LatLng(62.390836, 17.306916);
+	
+	var resultMap;
+	
+	var mapOptions = { 
+		    zoom: 14, 
+		    center: sundsvallLatLong, 
+		    mapTypeId: google.maps.MapTypeId.ROADMAP 
+		};
+	
+   	resultMap = new google.maps.Map(document.getElementById('mapDiv'), mapOptions);
+	
+	
+}();
+
+
 
 function toggleMenu() {
 	console.log('toogling menu...');

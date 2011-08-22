@@ -30,6 +30,12 @@ body {
 	z-index: 1;
 }
 
+#mapDiv { 
+	height: 100%;
+	width: 100%;
+	
+}
+
 #linesButton {
 }
 
