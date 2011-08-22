@@ -1,6 +1,6 @@
 var mapHandler = function(){
 	var sundsvallLatLong =  new google.maps.LatLng(62.390836, 17.306916);
-	
+	var busStops = [];
 	var resultMap;
 	
 	var mapOptions = { 
@@ -11,6 +11,26 @@ var mapHandler = function(){
 	
    	resultMap = new google.maps.Map(document.getElementById('mapDiv'), mapOptions);
 	
+   	function addBusStop(busStop) {
+   		var busStopIcon = 'img/busstopicon.png';
+   		var position = new google.maps.LatLng(busStop.position.latitude, busStop.position.longitude);
+   		var busStopMarker = new google.maps.Marker({position: position, 
+   								map: resultMap, 
+   								title: busStop.name, 
+   								icon: busStopIcon});
+   		busStops.push(busStopMarker);
+   	}
+   	
+   	function clearBusStops() {
+   		$.each(busStops, function(){
+   			this.setMap(null);
+   		});
+   	}
+   	
+   	return {
+   		addBusStop:addBusStop,
+   		clearBusStops:clearBusStops
+   	}
 	
 }();
 
@@ -40,6 +60,7 @@ function pimpMenu() {
 
 function menuItemClicked(event) {
 	console.log(event.data.busLine.name + ' clicked ' + event.data.busLine.lineNumber);
+	mapHandler.clearBusStops();
 	getRoute(event.data.busLine.lineNumber);
 	toggleMenu();
 	$('#currentLine').html("Current line: " + event.data.busLine.name).show();
@@ -64,7 +85,9 @@ function getLines() {
 
 function getRoute(lineNumber) {
 	$.getJSON('service/busservice/route/' + lineNumber, function(data) {
-		console.log(data);
+		$.each(data.routeInfo.busStops, function(){
+			mapHandler.addBusStop(this);
+		});
 	});
 }
 
