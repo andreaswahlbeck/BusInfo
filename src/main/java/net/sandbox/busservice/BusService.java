@@ -39,6 +39,7 @@ public class BusService {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Position getCurrent(@PathParam("lineNumber") String lineNumber){
 		System.out.println("Getting position for: " + lineNumber);
+		
 		return new Position();
 	}
 	
