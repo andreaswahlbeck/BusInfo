@@ -52,6 +52,7 @@ public class RouteLoader {
 	}
 	
 	private void loadRoute(String lineId, InputStream kmlInputStream) {
+		System.out.println("Loading route for: " + lineId);
 		final Kml kml = Kml.unmarshal(kmlInputStream);
 		Document document = (Document) kml.getFeature();
 		RouteInfo route = new RouteInfo();
