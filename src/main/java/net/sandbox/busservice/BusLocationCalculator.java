@@ -35,12 +35,12 @@ public class BusLocationCalculator {
 		startTimeCalendar.set(Calendar.MINUTE, (currentTimeCalendar.get(Calendar.MINUTE) / 4) * 4);
 		startTimeCalendar.set(Calendar.SECOND, 0);
 		startTimeCalendar.clear(Calendar.MILLISECOND);
-		System.out.println("Returning starttime: " + startTimeCalendar.getTime());
+//		System.out.println("Returning starttime: " + startTimeCalendar.getTime());
 		return startTimeCalendar;
 	}
 	
 	public long getTimeInSecondsSinceRouteStart() {
-		System.out.println("Current time: " + this.currentTime + " route start time: " + getRouteStartTime().getTime());
+//		System.out.println("Current time: " + this.currentTime + " route start time: " + getRouteStartTime().getTime());
 		return (this.currentTime.getTime() / 1000) - (getRouteStartTime().getTimeInMillis() / 1000);
 	}
 	/*

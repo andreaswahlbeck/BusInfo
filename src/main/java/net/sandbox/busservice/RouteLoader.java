@@ -1,5 +1,9 @@
 package net.sandbox.busservice;
 
+import geo.google.datamodel.GeoAltitude;
+import geo.google.datamodel.GeoCoordinate;
+import geo.google.datamodel.GeoUtils;
+
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,6 +27,14 @@ public class RouteLoader {
 	public void init() {
 		loadRouteForEttan();
 		loadRouteForTvaan();
+		loadRouteForTrean();
+	}
+
+	private void loadRouteForTrean() {
+		InputStream ios = Thread.currentThread().getContextClassLoader().getResourceAsStream("trean.kml");
+		if ( ios != null) {
+			loadRoute("3", ios);
+		}
 	}
 
 	private void loadRouteForTvaan() {
@@ -55,7 +67,18 @@ public class RouteLoader {
 					route.addBusStop(busStop);
 					
 				} else if (geometry instanceof LineString) {
-				
+					LineString lineString = (LineString) geometry;
+					GeoCoordinate lastCoordinate = null;
+					double totalDistance = 0;
+					for (Coordinate coordinate : lineString.getCoordinates()) {
+						route.addRoutePoint(new Position(Double.toString(coordinate.getLatitude()), Double.toString(coordinate.getLongitude())));
+						GeoCoordinate currentCoordinate = new GeoCoordinate(coordinate.getLongitude(), coordinate.getLatitude(), new GeoAltitude(coordinate.getAltitude()));
+						if (lastCoordinate != null) {
+							totalDistance += GeoUtils.distanceBetweenInKm(lastCoordinate, currentCoordinate) * 1000;
+						}
+						lastCoordinate = currentCoordinate;
+					}
+					route.setRouteDistance(totalDistance);
 				}
 			}
 		}

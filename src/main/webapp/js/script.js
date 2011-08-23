@@ -1,7 +1,12 @@
+function isStringEmpty(str) {
+	return (!str || 0 === str.length); 
+}
+
 var mapHandler = function(){
 	var sundsvallLatLong =  new google.maps.LatLng(62.390836, 17.306916);
 	var busStops = [];
 	var resultMap;
+	var currentBusPosition;
 	
 	var mapOptions = { 
 		    zoom: 14, 
@@ -17,7 +22,8 @@ var mapHandler = function(){
    		var busStopMarker = new google.maps.Marker({position: position, 
    								map: resultMap, 
    								title: busStop.name, 
-   								icon: busStopIcon});
+   								icon: busStopIcon,
+   								zIndex: 10});
    		busStops.push(busStopMarker);
    	}
    	
@@ -25,16 +31,37 @@ var mapHandler = function(){
    		$.each(busStops, function(){
    			this.setMap(null);
    		});
+   		removeBusIcon();
+   	}
+   	
+   	function updateBusPosition(position) {
+   		var busIcon = 'img/busicon.png';
+   		var position = new google.maps.LatLng(position.latitude, position.longitude);
+   		removeBusIcon();
+   		currentBusPosition = new google.maps.Marker({position: position, 
+														map: resultMap, 
+														title: 'The Bus', 
+														icon: busIcon,
+						   								zIndex: 20});
+   	}
+   	
+   	function removeBusIcon() {
+   		if (currentBusPosition && currentBusPosition.getMap()) {
+   			currentBusPosition.setMap(null);
+   		}
    	}
    	
    	return {
    		addBusStop:addBusStop,
-   		clearBusStops:clearBusStops
+   		clearBusStops:clearBusStops,
+   		updateBusPosition:updateBusPosition,
+   		removeBusIcon:removeBusIcon
    	}
 	
 }();
 
-
+var currentLineNumber = "";
+var busUpdater;
 
 function toggleMenu() {
 	console.log('toogling menu...');
@@ -64,6 +91,30 @@ function menuItemClicked(event) {
 	getRoute(event.data.busLine.lineNumber);
 	toggleMenu();
 	$('#currentLine').html("Current line: " + event.data.busLine.name).show();
+	if (busUpdater) {
+		console.log("shutting down current updater...")
+		clearInterval(busUpdater);
+	}
+	startTrackCurrentBus(event.data.busLine.lineNumber);
+}
+
+function startTrackCurrentBus(lineNumber) {
+	console.log("Starting new updater for: " + lineNumber)
+	currentLineNumber = lineNumber;
+	busUpdater = setInterval(getLatestBusPosition, "2000");
+}
+
+function getLatestBusPosition() {
+	//console.log("updating bus position for line: " + currentLineNumber);
+	$.getJSON('service/busservice/position/' + currentLineNumber, function(data) {
+		//console.log("Got updated position: " + data);
+		if (!isStringEmpty(data.longitude) && !isStringEmpty(data.latitude)) {
+			mapHandler.updateBusPosition(data);
+		} else {
+			console.log("Clearing update interval");
+			clearInterval(busUpdater);
+		}
+	});
 }
 
 function getLines() {

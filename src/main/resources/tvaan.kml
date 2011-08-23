@@ -3,26 +3,6 @@
 <Document>
   <name>tvaan</name>
   <description><![CDATA[]]></description>
-  <Style id="style4">
-    <LineStyle>
-      <color>73FF0000</color>
-      <width>5</width>
-    </LineStyle>
-  </Style>
-  <Style id="style5">
-    <IconStyle>
-      <Icon>
-        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
-      </Icon>
-    </IconStyle>
-  </Style>
-  <Style id="style1">
-    <IconStyle>
-      <Icon>
-        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
-      </Icon>
-    </IconStyle>
-  </Style>
   <Style id="style7">
     <IconStyle>
       <Icon>
@@ -37,7 +17,35 @@
       </Icon>
     </IconStyle>
   </Style>
-  <Style id="style2">
+  <Style id="style9">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style5">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style4">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style8">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style1">
     <IconStyle>
       <Icon>
         <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
@@ -51,65 +59,121 @@
       </Icon>
     </IconStyle>
   </Style>
-  <Placemark>
-    <name>Linje 1</name>
-    <description><![CDATA[]]></description>
-    <styleUrl>#style4</styleUrl>
-    <LineString>
-      <tessellate>1</tessellate>
-      <coordinates>
-        17.279221,62.396832,0.000000
-        17.301191,62.393513,0.000000
-      </coordinates>
-    </LineString>
-  </Placemark>
+  <Style id="style2">
+    <LineStyle>
+      <color>73FF0000</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
   <Placemark>
     <name>Busstop 1</name>
     <description><![CDATA[]]></description>
-    <styleUrl>#style5</styleUrl>
+    <styleUrl>#style7</styleUrl>
     <Point>
-      <coordinates>17.279177,62.396832,0.000000</coordinates>
+      <coordinates>17.279186,62.396854,0.000000</coordinates>
     </Point>
   </Placemark>
   <Placemark>
     <name>Busstop 2</name>
     <description><![CDATA[]]></description>
-    <styleUrl>#style1</styleUrl>
+    <styleUrl>#style3</styleUrl>
     <Point>
-      <coordinates>17.282095,62.395840,0.000000</coordinates>
+      <coordinates>17.282175,62.395901,0.000000</coordinates>
     </Point>
   </Placemark>
   <Placemark>
     <name>Busstop 3</name>
     <description><![CDATA[]]></description>
-    <styleUrl>#style7</styleUrl>
+    <styleUrl>#style9</styleUrl>
     <Point>
-      <coordinates>17.285913,62.395142,0.000000</coordinates>
+      <coordinates>17.285913,62.395176,0.000000</coordinates>
     </Point>
   </Placemark>
   <Placemark>
     <name>Busstop 4</name>
     <description><![CDATA[]]></description>
-    <styleUrl>#style3</styleUrl>
+    <styleUrl>#style5</styleUrl>
     <Point>
-      <coordinates>17.290163,62.394646,0.000000</coordinates>
+      <coordinates>17.290178,62.394684,0.000000</coordinates>
     </Point>
   </Placemark>
   <Placemark>
     <name>Busstop 5</name>
     <description><![CDATA[]]></description>
-    <styleUrl>#style2</styleUrl>
+    <styleUrl>#style4</styleUrl>
     <Point>
-      <coordinates>17.294842,62.394207,0.000000</coordinates>
+      <coordinates>17.294827,62.394188,0.000000</coordinates>
     </Point>
   </Placemark>
   <Placemark>
     <name>Busstop 6</name>
     <description><![CDATA[]]></description>
+    <styleUrl>#style8</styleUrl>
+    <Point>
+      <coordinates>17.301136,62.393513,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>BusStop 7</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style1</styleUrl>
+    <Point>
+      <coordinates>17.306692,62.393757,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>BusStop 8</name>
+    <description><![CDATA[]]></description>
     <styleUrl>#style6</styleUrl>
     <Point>
-      <coordinates>17.301149,62.393532,0.000000</coordinates>
+      <coordinates>17.309212,62.393066,0.000000</coordinates>
     </Point>
+  </Placemark>
+  <Placemark>
+    <name>Route</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style2</styleUrl>
+    <ExtendedData>
+      <Data name="_SnapToRoads">
+        <value>true</value>
+      </Data>
+    </ExtendedData>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        17.278500,62.397049,0.000000
+        17.278780,62.396969,0.000000
+        17.278780,62.396969,0.000000
+        17.278749,62.396900,0.000000
+        17.278811,62.396809,0.000000
+        17.278999,62.396809,0.000000
+        17.279100,62.396881,0.000000
+        17.281919,62.396118,0.000000
+        17.282169,62.395901,0.000000
+        17.283400,62.395611,0.000000
+        17.283760,62.395630,0.000000
+        17.285721,62.395210,0.000000
+        17.286730,62.395061,0.000000
+        17.301420,62.393490,0.000000
+        17.301670,62.393379,0.000000
+        17.302240,62.393330,0.000000
+        17.302389,62.393230,0.000000
+        17.302389,62.393230,0.000000
+        17.302460,62.393131,0.000000
+        17.302580,62.393108,0.000000
+        17.302700,62.393120,0.000000
+        17.302940,62.393211,0.000000
+        17.303061,62.393311,0.000000
+        17.304199,62.393421,0.000000
+        17.305901,62.393661,0.000000
+        17.308180,62.393921,0.000000
+        17.308180,62.393921,0.000000
+        17.308479,62.393890,0.000000
+        17.308929,62.393761,0.000000
+        17.309031,62.393631,0.000000
+        17.309071,62.393478,0.000000
+      </coordinates>
+    </LineString>
   </Placemark>
 </Document>
 </kml>

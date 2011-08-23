@@ -40,7 +40,8 @@ public class BusService {
 	public Position getCurrent(@PathParam("lineNumber") String lineNumber){
 		System.out.println("Getting position for: " + lineNumber);
 		
-		return new Position();
+		return busLineManager.getPositionForLine(lineNumber);
+		
 	}
 	
 }

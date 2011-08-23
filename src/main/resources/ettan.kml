@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Fake Bus routes</name>
+  <name>ettan</name>
   <description><![CDATA[]]></description>
-  <Style id="style5">
+  <Style id="style7">
     <IconStyle>
       <Icon>
         <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
       </Icon>
     </IconStyle>
   </Style>
-  <Style id="style6">
+  <Style id="style11">
     <IconStyle>
       <Icon>
         <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
@@ -31,7 +31,28 @@
       </Icon>
     </IconStyle>
   </Style>
-  <Style id="style4">
+  <Style id="style6">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style9">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style10">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style8">
     <IconStyle>
       <Icon>
         <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
@@ -39,6 +60,20 @@
     </IconStyle>
   </Style>
   <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style4">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style5">
     <LineStyle>
       <color>73FF0000</color>
       <width>5</width>
@@ -47,7 +82,7 @@
   <Placemark>
     <name>Busstop 1</name>
     <description><![CDATA[]]></description>
-    <styleUrl>#style5</styleUrl>
+    <styleUrl>#style7</styleUrl>
     <Point>
       <coordinates>17.308167,62.385784,0.000000</coordinates>
     </Point>
@@ -55,7 +90,7 @@
   <Placemark>
     <name>Busstop 2</name>
     <description><![CDATA[]]></description>
-    <styleUrl>#style6</styleUrl>
+    <styleUrl>#style11</styleUrl>
     <Point>
       <coordinates>17.302608,62.386353,0.000000</coordinates>
     </Point>
@@ -79,15 +114,55 @@
   <Placemark>
     <name>Busstop 5</name>
     <description><![CDATA[]]></description>
-    <styleUrl>#style4</styleUrl>
+    <styleUrl>#style6</styleUrl>
     <Point>
       <coordinates>17.289370,62.387882,0.000000</coordinates>
     </Point>
   </Placemark>
   <Placemark>
-    <name>bus route 1</name>
+    <name>BusStop 6</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style9</styleUrl>
+    <Point>
+      <coordinates>17.312050,62.385834,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>BusStop 7</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style10</styleUrl>
+    <Point>
+      <coordinates>17.311106,62.388439,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>BusStop 8</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style8</styleUrl>
+    <Point>
+      <coordinates>17.304604,62.389156,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>BusStop 9</name>
     <description><![CDATA[]]></description>
     <styleUrl>#style1</styleUrl>
+    <Point>
+      <coordinates>17.301105,62.390339,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>BusStop 10</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style4</styleUrl>
+    <Point>
+      <coordinates>17.302544,62.392975,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Route</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style5</styleUrl>
     <ExtendedData>
       <Data name="_SnapToRoads">
         <value>true</value>
@@ -96,7 +171,9 @@
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
-        17.289379,62.387878,0.000000
+        17.288891,62.387981,0.000000
+        17.289120,62.387909,0.000000
+        17.289761,62.387829,0.000000
         17.291809,62.387619,0.000000
         17.291950,62.387650,0.000000
         17.295900,62.387230,0.000000
@@ -107,7 +184,31 @@
         17.302320,62.386429,0.000000
         17.303141,62.386311,0.000000
         17.303900,62.386250,0.000000
-        17.308189,62.385792,0.000000
+        17.311390,62.385460,0.000000
+        17.311760,62.385368,0.000000
+        17.311760,62.385368,0.000000
+        17.311970,62.385811,0.000000
+        17.311979,62.385948,0.000000
+        17.312340,62.386490,0.000000
+        17.313499,62.387630,0.000000
+        17.313700,62.387741,0.000000
+        17.313869,62.387901,0.000000
+        17.313869,62.387901,0.000000
+        17.314110,62.388161,0.000000
+        17.314110,62.388161,0.000000
+        17.313379,62.388222,0.000000
+        17.311819,62.388432,0.000000
+        17.311569,62.388390,0.000000
+        17.305929,62.389000,0.000000
+        17.305361,62.389080,0.000000
+        17.300680,62.389568,0.000000
+        17.300680,62.389568,0.000000
+        17.301781,62.391670,0.000000
+        17.301781,62.391670,0.000000
+        17.301970,62.391701,0.000000
+        17.302050,62.391781,0.000000
+        17.302019,62.391891,0.000000
+        17.302521,62.392872,0.000000
       </coordinates>
     </LineString>
   </Placemark>
